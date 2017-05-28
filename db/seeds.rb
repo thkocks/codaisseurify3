@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Album.destroy_all
+
+gangstarr = User.create(email: "gangstarr@codaisseurify.com", password: "abcd1234")
+
+album = Album.create(title: "Moment of Truth",
+                      release_date: "10-04-1999",
+                      genre: "HipHop",
+                      image_url: "https://upload.wikimedia.org/wikipedia/en/e/eb/Gangstarrmomentoftruth.jpg",
+                      user: gangstarr)
