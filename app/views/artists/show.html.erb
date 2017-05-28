@@ -1,0 +1,17 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @artist.name %></div>
+
+  <div class="panel-body">
+
+    <p>Artist: <%= @artist.name %></p>
+    <p>Genre(s): <%= @artist.artist_genres %></p>
+    <p>bio:  <%= @artist.bio %></p>
+    <%= image_tag @artist.image_url %>
+
+
+
+  </div>
+
+</div>
+
+<%= link_to "Edit", edit_artist_path, class: "btn btn-default" %> <%= link_to "Delete", artist_path(@artist), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>

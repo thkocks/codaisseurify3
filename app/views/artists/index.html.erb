@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-3">
+    <ul class="sidebar-list">
+      <li class="sidebar-item"><%= link_to "Artists", albums_path, class: "sidebar-link active" %></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Artists
+      </div>
+      <div class="panel-body">
+
+        <% @albums.each do |album| %>
+        <div class="row">
+          <div class="col-md-7">
+            <h4><%= album.title %></h4>
+            <%= image_tag album.image_url %>
+          </div>
+          <div class="col-md-3 right">
+            <%= link_to "View", album, class: "btn btn-default" %>
+            <%= link_to "Update", edit_album_path(album), class: "btn btn-default" %>
+          </div>
+        </div>
+        <% end %>
+
+      </div>
+    </div>
+
+    <%= link_to "Add new album", new_album_path, class: "btn btn-primary" %>
+  </div>
+</div>
