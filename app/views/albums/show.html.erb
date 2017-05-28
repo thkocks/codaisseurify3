@@ -15,4 +15,4 @@
 
 </div>
 
-<%= link_to "Edit", edit_album_path, class: "btn btn-default" %>
+<%= link_to "Edit", edit_album_path, class: "btn btn-default" %> <%= link_to "Delete", album_path(@album), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
