@@ -1,0 +1,30 @@
+<%= form_for @album do |f| %>
+  <% @album.errors.full_messages.each do |msg| %>
+    <p class="alert alert-danger"><%= msg %></p>
+  <% end %>
+
+  <div class="form-group">
+    <label>Album Title</label>
+    <%= f.text_field :title, placeholder: "Album Title", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Genre</label>
+    <%= f.text_field :genre, placeholder: "Genre", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Release Date</label>
+    <%= f.text_area :release_date, placeholder: "Release Date", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Album Cover</label>
+    <%= f.text_area :image_url, placeholder: "Album Cover", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+    <%= link_to "Back", root_path, class: "btn btn-default" %>
+  </div>
+<% end %>

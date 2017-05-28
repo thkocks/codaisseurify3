@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @album.title %></div>
+
+  <div class="panel-body">
+
+    <p>Album: <%= @album.title %></p>
+    <p>Artist: <%= @album.user.profile.name%></p>
+    <p>Genre: <%= @album.genre %></p>
+    <p>Release Date:  <%= @album.release_date %></p>
+    <%= image_tag @album.image_url %>
+
+
+
+  </div>
+
+</div>
+
+<%= link_to "Edit", edit_album_path, class: "btn btn-default" %>
